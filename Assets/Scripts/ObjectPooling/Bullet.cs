@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float bulletSpeed = 5f;
+
+    private void Update()
     {
-        
+        transform.position += Vector3.forward * bulletSpeed * Time.deltaTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnBecameInvisible()
     {
-        
+        BulletPoolManager.instance.ReturnToBulletPool(this);
     }
 }
