@@ -18,7 +18,11 @@ public class BulletPoolManager : MonoBehaviour
 
     private void Start()
     {
-        bulletPool = new ObjectPool<Bullet>(CreateBullet, OnGet, OnRelease);        
+        bulletPool = new ObjectPool<Bullet>(CreateBullet, 
+            OnGet, 
+            OnRelease,
+            DestroyUnwanted,
+            maxSize: 10);        
     }
 
     public ObjectPool<Bullet> GetBulletPool()
@@ -48,4 +52,8 @@ public class BulletPoolManager : MonoBehaviour
         bullet.gameObject.SetActive(false);
     }
 
+    private void DestroyUnwanted(Bullet bullet)
+    {
+        Destroy(bullet.gameObject);
+    }
 }

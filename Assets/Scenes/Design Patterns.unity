@@ -492,7 +492,7 @@ GameObject:
   m_Layer: 0
   m_Name: ObjectPooling
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -535,7 +535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948832a9b81b3ab4fae1bdac9d7eac2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7383470383702686954, guid: 6ce23541cd122ef42b077ac173fc9775, type: 3}
 --- !u!1 &1834034106
 GameObject:
   m_ObjectHideFlags: 0
