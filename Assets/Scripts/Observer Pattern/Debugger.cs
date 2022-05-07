@@ -6,8 +6,8 @@ public class Debugger : MonoBehaviour
 {
     private IEnumerator Start()
     {
-        Health health = GetComponent<Health>();
-        Level level = GetComponent<Level>();
+        Health health = FindObjectOfType<Health>();
+        Level level = FindObjectOfType<Level>();
 
         while(true)
         {
